@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Unsubscribe-HTTP-request-angular"
+    }
+  },
+  "defaultProject": "Unsubscribe-HTTP-request-angular",
+  "cli": {
+    "analytics": false
+  }
 }
