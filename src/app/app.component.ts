@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Unsubscribe-HTTP-request-angular';
+  title = 'True Code 99 Examples';
 }

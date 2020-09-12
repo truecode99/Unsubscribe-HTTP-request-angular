@@ -5,10 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EmplyeeComponent } from './emplyee/emplyee.component';
 import { HttpClientModule } from "@angular/common/http";
+import { UndefinedObjectHandleComponent } from './undefined-object-handle/undefined-object-handle.component';
 @NgModule({
   declarations: [
     AppComponent,
-    EmplyeeComponent
+    EmplyeeComponent,
+    UndefinedObjectHandleComponent
   ],
   imports: [
     BrowserModule,
