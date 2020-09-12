@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { Subscription } from 'rxjs'; // Subscription Object from rxjs
 import { HttpRequestService } from '../http-request.service';
 @Component({
   selector: 'app-emplyee',
@@ -7,14 +7,14 @@ import { HttpRequestService } from '../http-request.service';
   styleUrls: ['./emplyee.component.css']
 })
 export class EmplyeeComponent implements OnInit, OnDestroy {
-  private empReq: Subscription;
+  private empReq: Subscription; // declare empReq as Subscription type
   constructor(private httpReqSer: HttpRequestService,) { }
   employee_name: string = "";
   ngOnInit(): void {
   }
 
   fetchEmplyeeDetails(id) {
-    if (this.empReq) {  // cancel previous http request
+    if (this.empReq) {  // cancel the previous subscription
       this.empReq.unsubscribe();
     }
     this.empReq = this.httpReqSer.fetchData('http://dummy.restapiexample.com/api/v1/employee/' + id).subscribe(
@@ -26,8 +26,8 @@ export class EmplyeeComponent implements OnInit, OnDestroy {
     );
   }
 
-  ngOnDestroy():void{
-    this.empReq.unsubscribe();
+  ngOnDestroy(): void {
+    this.empReq.unsubscribe(); // release subscription on component destroy
   }
 
 }
